@@ -6,40 +6,28 @@ This repo is the implementation of SparseSwin: Swin Transformer with Sparse Tran
 
 ## Results on Cifar10
 
-Model overview
-Model : SparseSwin Transformer
-Dataset : Cifar10
-Task : Image Classification
-Training Configuration
-Optimizer : AdamW
-Epochs : 20
+| Model          | #Params  | Input Resolution | Model Type   | Accuracy (%) |
+|----------------|----------|------------------|--------------|--------------|
+| ResNet XnIDR   | 23.86 M  | 224x224          | Convolution  | 96.87        |
+| NesT-B         | 97.2 M   | 32x32            | Transformer  | 97.2         |
+| CRATE-B        | 13.12 M  | 224x224          | Transformer  | 96           |
+| CRATE-L        | 77.64 M  | 224x224          | Transformer  | 97.2         |
+| SparseSwin (T) | 17.58 M  | 224x224          | Transformer  | 97.43        |
+| Assignment A-9 | 17.58 M  | 512x512          | Transformer  | 96.08        |
 
 
-<figure>
-    <center>
-        <img src="./sources/results_cifar10.PNG">
-        <figcaption><b>Fig. 1</b> Cifar10 results</figcaption>
-    </center>
-</figure>
+
 
 ## Results on Cifar100
 
-Model overview
-Model : SparseSwin Transformer
-Dataset : Cifar100
-Task : Image Classification
-Training Configuration
-Epochs : 20
-Regularization : Disabled
-Batch size : 12
-Num Workers : 8
-<figure>
-    <center>
-        <img src="./sources/results_cifar100.PNG">
-        <figcaption><b>Fig. 1</b> Cifar100 results</figcaption>
-    </center>
-</figure>
-
+| Model          | #Params  | Input Resolution | Model Type   | Accuracy (%) |
+|----------------|----------|------------------|--------------|--------------|
+| ResNet Xt-50   | 25.03 M  | 224x224          | Convolution  | 84.42        |
+| NesT-B         | 97.2 M   | 32x32            | Transformer  | 82.56        |
+| CRATE-B        | 22.80 M  | 224x224          | Transformer  | 82.7         |
+| CRATE-L        | 77.64 M  | 224x224          | Transformer  | 83.6         |
+| SparseSwin (T) | 17.58 M  | 224x224          | Transformer  | 85.35        |
+| Assignment A-9 | 17.58 M  | 512x512          | Transformer  | 82.69        |
 ## SparseSwin Detection using coco subsets
 
 Because of the availability of LIMITED compute GPU resource and drive space, I have used the concept of learning curve. Learning Curve
